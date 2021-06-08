@@ -1,0 +1,5 @@
+---
+applications:
+  - name: translator-service
+    env:
+#      MONGO_SERVICE_NAME: "mymongodb"
