@@ -48,13 +48,16 @@ public class TranslatorController {
 		if (TranslatorConstants.XML_VALUE.equalsIgnoreCase(inputType) && TranslatorConstants.JSON_VALUE.equalsIgnoreCase(outputType)){
 			outputMessage = xmlToJsonService.transform(message);
 			LOG.log(Level.INFO, "/translating xml to json - &gt; " );
-			LOG.log(Level.INFO, "/xml data - &gt; " + message);
 			System.out.println("xml to json");
+			LOG.log(Level.INFO, "/xml data - &gt; " + message);
+			LOG.log(Level.INFO, "/json data - &gt; " + outputMessage);
+			
 		} else if (TranslatorConstants.JSON_VALUE.equalsIgnoreCase(inputType) && TranslatorConstants.XML_VALUE.equalsIgnoreCase(outputType)){
 			outputMessage = jsonToXmlService.transform(message);
 			System.out.println("json to xml");
 			LOG.log(Level.INFO, "/translating json to  xml - &gt; " );
 			LOG.log(Level.INFO, "/json data - &gt; " + message);
+			LOG.log(Level.INFO, "/xml data - &gt; " + outputMessage);
 		}
 		return outputMessage;
 	}
