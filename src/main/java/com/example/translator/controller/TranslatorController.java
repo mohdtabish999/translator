@@ -4,6 +4,7 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,6 +18,7 @@ import com.example.translator.service.TranslatorServiceXmlJson;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 @RestController
+@RefreshScope
 @RequestMapping("/translate")
 public class TranslatorController {
 	
