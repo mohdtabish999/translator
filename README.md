@@ -36,4 +36,6 @@ Now push to PCF
 	> cf delete -r wrapper-service 
 	
 	> fly --target tutorial login --concourse-url http://127.0.0.1:8080 -u test -p test
-	> fly -t dev set-pipeline -p translate-service-pipeline -c pipeline.yml -l pipeline-secrets.yml
+	> fly -t dev pipelines
+	> fly -t dev set-pipeline -p translate-svc-pipeline -c pipeline.yml -l pipeline-secrets.yml
+	> fly -t dev destroy-pipeline -p hello-world
